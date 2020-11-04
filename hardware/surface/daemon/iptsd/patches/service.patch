@@ -1,0 +1,13 @@
+--- iptsd-orig/etc/systemd/iptsd.service	2020-11-04 16:16:19.463912725 +0100
++++ iptsd/etc/systemd/iptsd.service	2020-11-04 16:17:06.772797023 +0100
+@@ -3,10 +3,3 @@
+ Documentation=https://github.com/linux-surface/iptsd
+ After=dev-ipts-0.device
+ Wants=dev-ipts-0.device
+-
+-[Service]
+-Type=simple
+-ExecStart=/usr/bin/iptsd
+-
+-[Install]
+-WantedBy=multi-user.target
