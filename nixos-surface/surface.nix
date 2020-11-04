@@ -1,21 +1,21 @@
 { config, lib, pkgs, ... }:
 {
   imports = [
-    ./surface-iptsd-daemon-options.nix
+    ./daemon/surface-iptsd-daemon-options.nix
   ];
 
   nixpkgs.overlays = [(self: super: {
-	surface_firmware = super.callPackage ./surface-firmware.nix {};
-	surface-iptsd-daemon = super.callPackage ./surface-iptsd-daemon.nix {};
+	surface_firmware = super.callPackage ./firmware/surface-firmware.nix {};
+	surface-iptsd-daemon = super.callPackage ./daemon/surface-iptsd-daemon.nix {};
 	surface_kernel = super.linuxPackages_5_9.extend( self: (ksuper: {
 	  kernel = ksuper.kernel.override {
 	    kernelPatches = [
-		{ patch = linux-surface/patches/5.9/0001-surface3-oemb.patch; name = "1"; }
-		{ patch = linux-surface/patches/5.9/0002-wifi.patch; name = "2"; }
-		{ patch = linux-surface/patches/5.9/0003-ipts.patch; name = "3"; }
-		{ patch = linux-surface/patches/5.9/0004-surface-gpe.patch; name = "4"; }
-		{ patch = linux-surface/patches/5.9/0005-surface-sam-over-hid.patch; name = "5"; }
-		{ patch = linux-surface/patches/5.9/0006-surface-sam.patch; name = "6"; }
+		{ patch = kernel/linux-surface/patches/5.9/0001-surface3-oemb.patch; name = "1"; }
+		{ patch = kernel/linux-surface/patches/5.9/0002-wifi.patch; name = "2"; }
+		{ patch = kernel/linux-surface/patches/5.9/0003-ipts.patch; name = "3"; }
+		{ patch = kernel/linux-surface/patches/5.9/0004-surface-gpe.patch; name = "4"; }
+		{ patch = kernel/linux-surface/patches/5.9/0005-surface-sam-over-hid.patch; name = "5"; }
+		{ patch = kernel/linux-surface/patches/5.9/0006-surface-sam.patch; name = "6"; }
 	    ];
 	    extraConfig = ''
           	SERIAL_DEV_BUS y
