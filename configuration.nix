@@ -2,11 +2,11 @@
 
 {
   imports =
-    [ # Include the results of the hardware scan.
+    [ 
       ./hardware-configuration.nix
       ./base/laptop.nix
       ./hosts/surface.nix
-      ./nixos-surface/surface.nix
+      ./hardware/surface/surface.nix
     ];
   
   nixpkgs.config.allowUnfree = true;

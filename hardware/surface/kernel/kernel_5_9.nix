@@ -1,5 +1,5 @@
-{ }:
-rec {
+{ configs, pkgs, ... }:
+ {
   nixpkgs.config.packageOverrides = pkgs: {
     linux_5_9 = pkgs.linux_5_9.override {
       kernelPatches = [

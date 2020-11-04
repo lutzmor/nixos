@@ -4,3 +4,9 @@
 [submodule "nixos-surface/firmware/surface-ipts-firmware"]
 	path = nixos-surface/firmware/surface-ipts-firmware
 	url = https://github.com/linux-surface/surface-ipts-firmware
+[submodule "hardware/surface/firmware/surface-ipts-firmware"]
+	path = hardware/surface/firmware/surface-ipts-firmware
+	url = https://github.com/linux-surface/surface-ipts-firmware
+[submodule "hardware/surface/kernel/linux-surface"]
+	path = hardware/surface/kernel/linux-surface
+	url = https://github.com/linux-surface/linux-surface
