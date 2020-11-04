@@ -1,7 +1,12 @@
 { config, lib, pkgs, ... }:
 {
+  imports = [
+    ./surface-iptsd-daemon-options.nix
+  ];
+
   nixpkgs.overlays = [(self: super: {
 	surface_firmware = super.callPackage ./surface-firmware.nix {};
+	surface-iptsd-daemon = super.callPackage ./surface-iptsd-daemon.nix {};
 	surface_kernel = super.linuxPackages_5_9.extend( self: (ksuper: {
 	  kernel = ksuper.kernel.override {
 	    kernelPatches = [
@@ -38,6 +43,7 @@
 
   services = {
 	udev.packages = [ pkgs.surface_firmware ];
+	surface-iptsd-daemon.enable = true;
   };
 
   powerManagement = {
