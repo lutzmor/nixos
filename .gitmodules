@@ -13,3 +13,6 @@
 [submodule "hardware/surface/libwacom/libwacom-surface"]
 	path = hardware/surface/libwacom/libwacom-surface
 	url = https://github.com/linux-surface/libwacom-surface
+[submodule "hardware/nixos-surface"]
+	path = hardware/nixos-surface
+	url = https://github.com/lutzmor/nixos-surface
