@@ -1,4 +1,4 @@
-{ configs, pkgs, ... }:
+{ pkgs, ... }:
 {
   linux_5_9 = pkgs.linux_5_9.override {
   	kernelPatches = [
