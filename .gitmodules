@@ -1,6 +1,0 @@
-[submodule "nixos-surface/linux-surface"]
-	path = nixos-surface/linux-surface
-	url = https://github.com/linux-surface/linux-surface
-[submodule "nixos-surface/surface-ipts-firmware"]
-	path = nixos-surface/surface-ipts-firmware
-	url = https://github.com/linux-surface/surface-ipts-firmware
