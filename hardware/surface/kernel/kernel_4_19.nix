@@ -13,6 +13,7 @@ rec {
         { patch = linux-surface/patches/4.19/0008-surface-gpe.patch; name = "8"; }
         { patch = linux-surface/patches/4.19/0009-surface-sam-over-hid.patch; name = "9"; }
         { patch = linux-surface/patches/4.19/0010-surface-sam.patch; name = "10"; }
+        { patch = patches/export_kernel_fpu_functions_4_14.patch; name = "11"; }
       ];
       extraConfig = ''
         INTEL_IPTS m
