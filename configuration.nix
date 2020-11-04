@@ -39,6 +39,7 @@
     		vim
     		home-manager
 		git
+		efibootmgr
   	];
   	pathsToLink = ["/libexec"];
   };
