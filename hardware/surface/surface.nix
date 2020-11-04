@@ -9,7 +9,11 @@
 	surface-iptsd-daemon = super.callPackage ./daemon/iptsd/surface-iptsd-daemon.nix {};
 	surface_kernel = super.callPackage ./kernel/kernel_5_9.nix {};
   })];
-
+  
+  boot = {
+  	kernelPackages = pkgs.surface_kernel;
+  };
+  
   hardware = {
   	firmware = [ pkgs.surface_firmware ];
   };
