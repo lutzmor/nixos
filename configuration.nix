@@ -4,6 +4,7 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
+      ./nixos-surface/model/surface7.nix
       ./nixos-surface/surface.nix
     ];
   
