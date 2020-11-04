@@ -10,3 +10,6 @@
 [submodule "hardware/surface/kernel/linux-surface"]
 	path = hardware/surface/kernel/linux-surface
 	url = https://github.com/linux-surface/linux-surface
+[submodule "hardware/surface/libwacom/libwacom-surface"]
+	path = hardware/surface/libwacom/libwacom-surface
+	url = https://github.com/linux-surface/libwacom-surface
