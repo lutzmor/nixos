@@ -3,9 +3,8 @@
 {
   imports =
     [ 
-      ./hardware-configuration.nix
       ./base/laptop.nix
-      ./hosts/surface.nix
+      ./hosts/surface/surface.nix
       ./hardware/surface7.nix
     ];
   
