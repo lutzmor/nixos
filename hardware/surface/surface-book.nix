@@ -15,16 +15,9 @@
 
   environment.systemPackages = [ pkgs.libinput ];
   hardware.firmware = [ pkgs.surface_firmware ];
-
+  
   boot = {
-    blacklistedKernelModules = [ "surfacepro3_button" "nouveau" ];
     kernelPackages = pkgs.surface_kernel;
-    initrd = {
-      kernelModules = [ "hid" "hid_sensor_hub" "i2c_hid" "hid_generic" "usbhid" "hid_multitouch" "intel_ipts" "surface_acpi" "zfs" ];
-      availableKernelModules = [ "xhci_pci" "nvme" "usb_storage" "sd_mod" "zfs" ];
-      supportedFilesystems = [ "zfs" ];
-    };
-    extraModulePackages = with config.boot.kernelPackages; [ zfs ];
   };
 
   services.udev.packages = [ pkgs.surface_firmware pkgs.libwacom pkgs.surface-dtx-daemon ];
