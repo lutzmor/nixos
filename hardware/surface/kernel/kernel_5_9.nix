@@ -1,6 +1,8 @@
 { pkgs, ... }:
-{
-  linux_5_9 = pkgs.linux_5_9.override {
+rec {
+  boot.kernelPackages = pkgs.linuxPackages_5_9;
+  nixpkgs.config.packageOverrides = pkgs: {
+    linux_5_9 = pkgs.linux_5_9.override {
   	kernelPatches = [
     	{ patch = linux-surface/patches/5.9/0001-surface3-oemb.patch; name = "1"; }
 			{ patch = linux-surface/patches/5.9/0002-wifi.patch; name = "2"; }
@@ -18,5 +20,6 @@
       SURFACE_3_POWER_OPREGION m
       SURFACE_PRO3_BUTTON m
     '';
+  };
   };
 }
