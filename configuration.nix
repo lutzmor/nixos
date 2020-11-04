@@ -28,7 +28,6 @@
   hardware = {
 	pulseaudio.enable = true;
 	opengl.driSupport = true;
-	acpilight.enable = true;
   };
 
   users.users.espo = {
@@ -42,7 +41,6 @@
     		vim
     		home-manager
 		git
-		acpilight
   	];
   	pathsToLink = ["/libexec"];
   };
@@ -70,12 +68,6 @@
 		};
 		libinput.enable = true;
  	};
-  };
-
-  powerManagement = {
-  	enable = true;
-	powertop.enable = true;
-	cpuFreqGovernor = "powersave";
   };
   
   virtualisation = {
