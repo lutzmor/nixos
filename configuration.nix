@@ -6,7 +6,7 @@
       ./hardware-configuration.nix
       ./base/laptop.nix
       ./hosts/surface.nix
-      ./hardware/surface/surface.nix
+      ./hardware/surface7.nix
     ];
   
   nixpkgs.config.allowUnfree = true;
