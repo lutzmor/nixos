@@ -4,7 +4,8 @@
   imports =
     [ # Include the results of the hardware scan.
       ./hardware-configuration.nix
-      ./nixos-surface/model/surface7.nix
+      ./base/laptop.nix
+      ./hosts/surface.nix
       ./nixos-surface/surface.nix
     ];
   
@@ -15,10 +16,8 @@
   };
 
   networking = {
-	hostName = "surface";
 	networkmanager.enable = true;
 	useDHCP = false;
-	interfaces.wlp0s20f3.useDHCP = true;
   };
   
   time.timeZone = "Europe/Berlin";

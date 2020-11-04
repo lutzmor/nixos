@@ -1,5 +1,10 @@
 { config, pkgs, ... }:
-rec {
+{
+  networking = {
+	hostName = "surface";
+	interfaces.wlp0s20f3.useDHCP = true;
+  };
+ 
   boot = {
 	  blacklistedKernelModules = [ "surfacepro3_button" "nouveau" ];
 	  kernelPackages = pkgs.surface_kernel;
