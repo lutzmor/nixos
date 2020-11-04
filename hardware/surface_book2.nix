@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
-    ./surface/surface_book.nix
+    ./surface/surface-book.nix
   ];
   
   boot = {
