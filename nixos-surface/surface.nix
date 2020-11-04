@@ -7,7 +7,7 @@
   nixpkgs.overlays = [(self: super: {
 	surface_firmware = super.callPackage ./firmware/surface-firmware.nix {};
 	surface-iptsd-daemon = super.callPackage ./daemon/surface-iptsd-daemon.nix {};
-	surface_kernel = super.callPackage ./kernel/kernel_5_9.nix {};
+	surface_kernel = super.callPackage ./kernel/kernel_5_9.nix {config, pkgs};
   })];
 
   hardware = {
