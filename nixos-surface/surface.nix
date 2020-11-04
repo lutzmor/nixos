@@ -29,7 +29,10 @@
 	  };
 	}));
   })];
-  hardware.firmware = [ pkgs.surface_firmware ];
+
+  hardware = {
+  	firmware = [ pkgs.surface_firmware ];
+  };
 
   boot = {
 	blacklistedKernelModules = [ "surfacepro3_button" "nouveau" ];
@@ -46,12 +49,5 @@
 	surface-iptsd-daemon = {
 	  enable = true;
 	};
-	#surface-iptsd-daemon.enable = true;
-  };
-
-  powerManagement = {
-    enable = true;
-    powertop.enable = true;
-    cpuFreqGovernor = "powersave";
   };
 }
