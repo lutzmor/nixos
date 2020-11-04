@@ -1,6 +1,7 @@
 { config, pkgs, ... }:
 {
   imports = [
+    ./surface/kernel/kernel_4_19.nix
     ./surface/surface.nix
   ];
   
