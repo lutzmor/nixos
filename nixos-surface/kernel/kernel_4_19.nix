@@ -1,7 +1,7 @@
 { config, pkg, ... }:
 rec {
   nixpkgs.config.packageOverrides = pkgs: {
-    linux_4_4 = pkgs.linux_4_4.override {
+    linux_4_19 = pkgs.linux_4_19.override {
       kernelPatches = [
         { patch = linux-surface/patches/4.19/0001-surface3-power.patch; name = "1";} 
         { patch = linux-surface/patches/4.19/0002-surface3-touchscreen-dma-fix.patch; name = "2";} 
