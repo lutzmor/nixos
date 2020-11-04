@@ -1,5 +1,6 @@
 { config, pkg, ... }:
 rec {
+  boot.kernelPackages = pkgs.linuxPackages_5_4;
   nixpkgs.config.packageOverrides = pkgs: {
     linux_5_4 = pkgs.linux_5_4.override {
       kernelPatches = [
