@@ -27,7 +27,7 @@ in
     systemd.services.surface-iptsd-daemon = {
       wantedBy = [ "multi-user.target" ];
       path = [ pkgs.surface-iptsd-daemon pkgs.utillinux pkgs.bash ];
-      script = "RUST_BACKTRACE=full exec iptsd";
+      script = "iptsd";
     };
     services.udev.packages = [ pkgs.surface-iptsd-daemon ];
     systemd.packages = [ pkgs.surface-iptsd-daemon ];
